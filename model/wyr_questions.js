@@ -1,4 +1,4 @@
-const questions = [
+const questions = [ // all the questions that could be asked
     {
         'question': 'Live in a house shaped like a triangle or a house shaped like a circle?',
         'answer1': 'Triangle house',
@@ -26,10 +26,10 @@ const questions = [
     },
 ]
 
-function randomWyrQuestion() {
+function randomWyrQuestion() { // function to get a random question from the list of questions
     const randomIndex = Math.floor(Math.random() * questions.length)
     const randomQuestion = questions[randomIndex]
     return randomQuestion
 }
 
-module.exports = randomWyrQuestion
+module.exports = randomWyrQuestion // export the function to be used

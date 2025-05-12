@@ -1,10 +1,11 @@
-const express = require('express')
-const router = express.Router()
-const randomWyrQuestion = require('../model/wyr_questions')
+const express = require('express') // Import express
+const path = require('path') // Import path
+const router = express.Router() // Create a new router
+const randomWyrQuestion = require('../model/wyr_questions') // Imports the random question functio from model/wyr_questions
 
 router.get('/wyr', function (req, res, next) {
-    const wyrQuestion = randomWyrQuestion()
-    res.json(wyrQuestion)
+    const wyrQuestion = randomWyrQuestion() // Calls the function to get a random question
+    res.json(wyrQuestion) // Returns the question as a JSON object
 })
 
-module.exports = router
+module.exports = router // Exports the router
